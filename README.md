@@ -2,6 +2,8 @@
 
 송파구 필지 데이터 및 집계구 인구통계를 시각화하는 React + Leaflet 웹 애플리케이션입니다!
 
+https://bomizzang.github.io/smartcity13/
+
 
 ##  데이터 출처
 
