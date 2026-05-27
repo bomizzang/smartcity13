@@ -444,9 +444,10 @@ export default function App() {
 
   // 데이터 로드
   useEffect(() => {
-    fetch('/parcels.geojson').then(r => r.json()).then(data => { setParcelsData(data); setParcelsLoaded(true); });
-    fetch('/haengjeong.geojson').then(r => r.json()).then(setHaengjeongData);
-    fetch('/jipgegu_stats.json').then(r => r.json()).then(setJipgeguStats);
+    const base = import.meta.env.BASE_URL;
+    fetch(`${base}parcels.geojson`).then(r => r.json()).then(data => { setParcelsData(data); setParcelsLoaded(true); });
+    fetch(`${base}haengjeong.geojson`).then(r => r.json()).then(setHaengjeongData);
+    fetch(`${base}jipgegu_stats.json`).then(r => r.json()).then(setJipgeguStats);
   }, []);
 
   // 통계 계산
