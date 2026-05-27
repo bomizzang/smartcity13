@@ -20,13 +20,14 @@ function calcStats(features, field, faField, colorMap) {
     map[key].floorArea += fa;
   }
   const total = features.length;
+  const totalFloor = Object.values(map).reduce((s, v) => s + v.floorArea, 0);
   return Object.entries(map)
-    .sort((a, b) => b[1].count - a[1].count)
+    .sort((a, b) => b[1].floorArea - a[1].floorArea)
     .map(([name, val]) => ({
       name,
       count: val.count,
       floorArea: val.floorArea,
-      pct: ((val.count / total) * 100).toFixed(1),
+      pct: totalFloor > 0 ? ((val.floorArea / totalFloor) * 100).toFixed(1) : ((val.count / total) * 100).toFixed(1),
       color: getColor(name, colorMap),
     }));
 }
