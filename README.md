@@ -2,20 +2,6 @@
 
 송파구 필지 데이터 및 집계구 인구통계를 시각화하는 React + Leaflet 웹 애플리케이션입니다!
 
-##  실행 방법
-
-```bash
-npm install
-npm run dev
-```
-→ http://localhost:5173 에서 실행
-
-##  기술 스택
-
-- **React** (Vite)
-- **Leaflet.js** — 지도 렌더링
-- **Recharts** — 파이차트, 바차트
-- **브이월드 WMTS API** — 베이스맵
 
 ##  데이터 출처
 
